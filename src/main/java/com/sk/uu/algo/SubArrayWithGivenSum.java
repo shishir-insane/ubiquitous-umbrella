@@ -38,7 +38,13 @@
  * Explanation :
  * In first test case, sum of elements from 2nd position to 4th position is 12
  * In second test case, sum of elements from 1st position to 5th position is 15
-*/
+ *
+ * SubArrayWithGivenSum.java
+ * com.sk.uu.algo
+ * ubiquitous-umbrella
+ *
+ * Copyright 2018 - Shishir Kumar
+ */
 
 package com.sk.uu.algo;
 
@@ -46,6 +52,12 @@ import java.util.Scanner;
 
 public class SubArrayWithGivenSum {
 
+    /**
+     * The main method.
+     *
+     * @param args
+     *            the arguments
+     */
     public static void main(final String[] args) {
         final Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
@@ -56,12 +68,22 @@ public class SubArrayWithGivenSum {
             for (int i = 0; i < n; i++) {
                 a[i] = sc.nextInt();
             }
-            subarraySum(a, n, sum);
+            findSubarrayWithSum(a, n, sum);
             t--;
         }
     }
 
-    public static void subarraySum(final int a[], final int n, final int sum) {
+    /**
+     * Find subarray with sum.
+     *
+     * @param a
+     *            the a
+     * @param n
+     *            the n
+     * @param sum
+     *            the sum
+     */
+    public static void findSubarrayWithSum(final int a[], final int n, final int sum) {
         int start = 0;
         int tempSum = a[0];
         for (int i = 1; i < n; i++) {
